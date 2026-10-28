@@ -5,7 +5,9 @@ import { todoRepository } from './todo.js';
 const port = Number(process.env.PORT || 3001);
 const uri = process.env.MONGODB_URI;
 if (!uri) {
-  console.error('MONGODB_URI is missing. Copy server/.env.example to server/.env and set your MongoDB connection string.');
+  console.error(
+    'MONGODB_URI is missing. Copy server/.env.example to server/.env and set your MongoDB connection string.',
+  );
   process.exit(1);
 }
 
